@@ -1,0 +1,46 @@
+=meta: 0.0.2
+
+name: acmeism-npm
+version: 0.0.1
+abstract: Make package.json from Meta file
+homepage: http://ingy.net
+tag: [acmeism]
+license: MIT
+copyright: 2016
+
+author:
+  name: Ingy döt Net
+  email: ingy@ingy.net
+  homepage: http://ingy.net
+  github: ingydotnet
+  twitter: ingydotnet
+  freenode: ingy
+
+devel:
+  git: https://github.com/schematype/acmeism-npm-js
+  bug: https://github.com/schematype/acmeism-npm-js/issues
+  irc: irc.freenode.net#ingy
+
+=npm:
+  bin:
+    acmeism-npm-check-release: bin/acmeism-npm-check-release
+    acmeism-npm-make-npm: bin/acmeism-npm-make-npm
+    acmeism-npm-meta-to-package-json: bin/acmeism-npm-meta-to-package-json
+  engines:
+    node: '>=0.4.0'
+  dependencies:
+    js-yaml: '>=3.6.1'
+  devDependencies:
+    coffee-script: '>=1.10.0'
+  files:
+  - Changes
+  - License
+  - ReadMe.md
+  - bin
+  - doc
+  - man
+  - package.json
+  - share
+  man: man/man1/acmeism-npm.1
+  scripts:
+    test: coffee -e '(require "./test/lib/Test/Harness").run()' test
